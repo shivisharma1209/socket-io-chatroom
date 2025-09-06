@@ -1,0 +1,158 @@
+.messageBox {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 12px 16px;
+    margin: 6px 0;
+    display: inline-block;
+    max-width: 75%;
+    position: relative;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    box-shadow: 0 4px 12px rgba(251, 146, 60, 0.15);
+    border: 1px solid #fed7aa;
+    word-wrap: break-word;
+    animation: messageAppear 0.3s ease-out;
+}
+
+@keyframes messageAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.messageText {
+    width: 100%;
+    color: #9a3412;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.sendText {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #f97316;
+    margin: 2px 8px;
+    font-weight: 500;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.messageContainer {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 16px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.messageContainer.justifyStart {
+    justify-content: flex-start;
+}
+
+.messageContainer.justifyStart .messageBox {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border-left: 4px solid #fbbf24;
+    position: relative;
+}
+
+.messageContainer.justifyStart .messageBox::before {
+    content: '◡';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    color: #ffffff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+
+.messageContainer.justifyStart .sendText {
+    color: #d97706;
+    order: 2;
+    margin-left: 8px;
+}
+
+.messageContainer.justifyEnd {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.messageContainer.justifyEnd .messageBox {
+    background: linear-gradient(135deg, #fb923c, #f97316);
+    border-right: 4px solid #ea580c;
+    position: relative;
+}
+
+.messageContainer.justifyEnd .messageBox .messageText {
+    color: #ffffff;
+}
+
+.messageContainer.justifyEnd .messageBox::after {
+    content: '◠';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, #f87171, #ef4444);
+    color: #ffffff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(248, 113, 113, 0.3);
+}
+
+.messageContainer.justifyEnd .sendText {
+    color: #dc2626;
+    order: 2;
+    margin-right: 8px;
+}
+
+.colorWhite {
+    color: #ffffff;
+}
+
+.colorDark {
+    color: #9a3412;
+}
+
+.backgroundBlue {
+    background: linear-gradient(135deg, #fb923c, #f97316) !important;
+    border-right: 4px solid #ea580c !important;
+}
+
+.backgroundBlue .messageText {
+    color: #ffffff !important;
+}
+
+.backgroundLight {
+    background: linear-gradient(135deg, #fef3c7, #fde68a) !important;
+    border-left: 4px solid #fbbf24 !important;
+}
+
+.messageBox:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(251, 146, 60, 0.25);
+    transition: all 0.3s ease;
+}

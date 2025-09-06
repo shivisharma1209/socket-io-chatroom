@@ -1,0 +1,25 @@
+.messages {
+    padding: 20px 0;
+    overflow: auto;
+    flex: auto;
+    background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 100%);
+    position: relative;
+}
+
+.messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+    background: rgba(254, 215, 170, 0.3);
+    border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #fbbf24, #f59e0b);
+    border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #f59e0b, #d97706);
+}

@@ -1,0 +1,93 @@
+.form {
+    display: flex;
+    border-top: 2px solid #fed7aa;
+    background: linear-gradient(45deg, #fffbeb, #fef3c7);
+    border-radius: 0 0 24px 24px;
+    padding: 20px;
+    gap: 12px;
+    position: relative;
+}
+
+.form::before {
+    content: '💕';
+    position: absolute;
+    top: -8px;
+    right: 24px;
+    font-size: 16px;
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.input {
+    border: 2px solid #fed7aa;
+    border-radius: 20px;
+    padding: 14px 18px;
+    flex: 1;
+    font-size: 15px;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    color: #9a3412;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #fb923c;
+    box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.15);
+    background: #ffffff;
+}
+
+.input::placeholder {
+    color: #f97316;
+}
+
+.sendButton {
+    color: #ffffff;
+    text-transform: none;
+    text-decoration: none;
+    background: linear-gradient(135deg, #fb923c, #ea580c);
+    padding: 14px 20px;
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(251, 146, 60, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.sendButton::before {
+    content: '→';
+    margin-right: 6px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.sendButton:hover::before {
+    transform: translateX(4px);
+}
+
+.sendButton:hover {
+    background: linear-gradient(135deg, #f97316, #dc2626);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(251, 146, 60, 0.4);
+}
+
+.sendButton:active {
+    transform: translateY(0);
+}
